@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Gucci Women's Cotton-Blend Tweed Dress</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+
+<div id="navbar-placeholder"></div>
+
+<body>
+  <div class="product-container">
+    <div class="image">
+      <div class="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1632573801508-4ede5a46c4d8?q=80&w=1969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Gucci Women's Cotton-Blend Tweed Dress">
+      </div>
+    </div>
+
+
+    <div class="product-info">
+      <h1 class="product-title">Gucci Women's Cotton-Blend Tweed Dress</h1>
+
+      <div class="product-details">
+        <p class="price"> <strike>$3,700.00</strike>  $874.99  <span class="discount">(Save 76%)</span></p>
+        <p class="sizes">Sizes: <span>38</span><span>40</span><span>42</span><span>44</span> </p>
+        <p class="color">Color: Pink</p>
+        <p class="stock">Only 2 left in stock!</p>
+        <hr>
+
+        <p class="description">
+          Lorem ipsum, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, velit voluptatum eaque nulla asperiores dolorum culpa accusamus maiores ad impedit libero eius, iusto, quae a? dolor sit amet consectetur adipisicing elit. Vero quas ex perspiciatis laborum, praesentium libero iusto unde optio. Temporibus harum perferendis vitae perspiciatis, sed deserunt?
+        </p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<div id="footer-placeholder"></div>
+
+<!-- style starts here -->
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .product-container {
+    width: 90%;
+    padding: 50px;
+    margin:   auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .product-info{s
+    width: 45%;
+    padding: 20px;
+    text-align: left;
+    margin-left: 50px;
+  }
+  .product-details :nth-child(1) > span {
+    border: none;
+    
+  }
+  .product-title {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-wrap: wrap;
+  }
+  hr{
+    margin-top: 30px;
+
+  }
+.description {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 100;
+
+}
+ 
+  .product-image img {
+    width: 500px;
+    height: fit-content;
+    margin-left: 50px;
+  }
+
+
+  .price {
+    font-size: 25px;
+    margin-bottom: 20px
+  }
+
+  .price .discount {
+    font-size: 0.8rem;
+    color: red;
+    margin-left: 1rem;
+  }
+
+  span {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  span:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .sizes,
+  .color,
+  .stock {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .add-to-cart {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    font-size: 15px;
+    width: 60%;
+    height: 42px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .buy-now {
+    background-color: #384ce9;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 60%;
+    height: 42px;
+    margin-top: 20px;
+  }
+  .buy-now:hover {
+    background-color: #6165e1;
+  }
+
+  .add-to-cart:hover {
+    background-color: #333;
+  }
+</style>
+
+<!-- script functionality starts here -->
+<script>
+  // Function to fetch and insert the navbar content
+  function loadNavbar() {
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+      });
+  }
+
+  // Function to fetch and insert the footer content
+  function loadFooter() {
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  }
+
+
+  loadNavbar();
+  loadFooter();
+</script>
+
+</html>

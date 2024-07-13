@@ -1,0 +1,99 @@
+/* Apply CSS reset and set global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Styling for the hero section */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #6207b6); /* Gradient background */
+    color: #fff; /* Text color */
+    position: relative;
+}
+
+/* Container for the clock */
+.container {
+    width: 800px; /* Width of the container */
+    height: 180px; /* Height of the container */
+    position: absolute; /* Absolute positioning for centering */
+    top: 50%; /* Move to vertical center */
+    left: 50%; /* Move to horizontal center */
+    transform: translate(-50%, -50%); /* Center the container */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Styling for the clock display */
+.clock {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(235, 0, 255, 0.111); /* Background color with transparency */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    backdrop-filter: blur(40px); /* Apply blur effect to background */
+}
+
+/* Styling for the decorative circle on the top-left of the container */
+.container::before {
+    content: ' '; /* Empty content */
+    width: 180px; /* Width of the element */
+    height: 180px; /* Height of the element */
+    background: #0ccf05; /* Background color */
+    position: absolute; /* Absolute positioning */
+    border-radius: 5px; /* Rounded corners */
+    left: -50px; /* Position on the left side */
+    top: -50px; /* Position on the top side */
+    z-index: -1; /* Behind other content */
+}
+
+/* Styling for the decorative circle on the bottom-right of the container */
+.container::after {
+    content: ' '; /* Empty content */
+    width: 180px; /* Width of the element */
+    height: 180px; /* Height of the element */
+    background: #c203ed; /* Background color */
+    position: absolute; /* Absolute positioning */
+    border-radius: 50%; /* Circular shape */
+    right: -30px; /* Position on the right side */
+    bottom: -50px; /* Position on the bottom side */
+    z-index: -1; /* Behind other content */
+}
+
+/* Styling for the digits in the clock */
+.clock span {
+    font-size: 80px; /* Font size */
+    width: 110px; /* Width of each digit container */
+    display: inline-block; /* Inline block display */
+    text-align: center; /* Center text horizontally */
+    position: relative; /* Relative positioning for pseudo-elements */
+}
+
+/* Styling for the labels ('HOURS', 'MINUTES', 'SECONDS') */
+.clock span::after {
+    font-size: 16px; /* Font size */
+    position: absolute; /* Absolute positioning for positioning relative to parent span */
+    bottom: -5px; /* Position below the digit */
+    left: 50%; /* Position in the center horizontally */
+    text-align: center; /* Center text horizontally */
+    transform: translateX(-50%); /* Center the label relative to its parent span */
+}
+
+/* Label for hours */
+#hrs::after {
+    content: 'HOURS'; /* Label text */
+}
+
+/* Label for minutes */
+#min::after {
+    content: 'MINUTES'; /* Label text */
+}
+
+/* Label for seconds */
+#sec::after {
+    content: 'SECONDS'; /* Label text */
+}
