@@ -12,6 +12,9 @@ Preview:
 2.  Open index.html in your web browser.
 3.  The digital clock will start displaying the current time.
 
+##Live Preview;
+  Delployment link : https://soft-bubblegum-13fda4.netlify.app/
+
 ## File Structure:
 index.html: Main HTML file containing the structure of the digital clock.
 style.css: CSS file for styling the digital clock and its container.
